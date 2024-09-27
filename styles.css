@@ -1,0 +1,102 @@
+/* Welcome to the Style-Train */
+/* CSS is done in the order of HTML */
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    background-color: #000000;
+}
+
+/* Toolbar Area*/
+#toolbar {
+    background-color: #2e372e;
+    border-right: 2px solid #000000;
+    color: white;
+    padding: 12px;
+    font-size: 12px;
+}
+
+/* Farm Sections*/
+#grid-container {
+    display: flex;
+    align-items: center;
+}
+
+.farm-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 38px);
+    grid-template-columns: repeat(10, 38px);
+}
+
+/* Define the farm and environment tiles*/
+.tile {
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    filter: saturate(80%);
+    background-position: center;
+    
+}
+
+/* Define the farm and envrionment tiles*/
+.farm_tile {background-image: url(Contents/Sprites/Tiles/farm_tile.png);}
+.path {background-image: url(Contents/Sprites/Tiles/path.png);}
+.grass_topleft {background-image: url(Contents/Sprites/Tiles/grass_topleft.png);}
+.grass_middleleft {background-image: url(Contents/Sprites/Tiles/grass_middleleft.png);}
+.grass_bottomleft {background-image: url(Contents/Sprites/Tiles/grass_bottomleft.png);}
+.grass_bottomcenter {background-image: url(Contents/Sprites/Tiles/grass_bottomcenter.png);}
+.grass_topcenter {background-image: url(Contents/Sprites/Tiles/grass_topcenter.png);}
+.grass_topright {background-image: url(Contents/Sprites/Tiles/grass_topright.png);}
+.grass_middleright {background-image: url(Contents/Sprites/Tiles/grass_middleright.png);}
+.grass_bottomright {background-image: url(Contents/Sprites/Tiles/grass_bottomright.png);}
+
+/* Define all the planted crops + stages */
+.planted {background-image: url(Contents/Sprites/Tiles/planted.png);}
+
+/* Define all the seed packets */
+
+
+
+
+/*Timer and Overlay Section*/
+
+#timer_count {
+    text-align: center;
+    font-size: 86px;
+    position: fixed;
+    left: 42.75%;
+    top: 40%;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 10s ease-in-out;
+    z-index: 9999;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+  }
+
+.overlay_text {
+    position: fixed;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 5s ease-in-out;
+    z-index: 9999;
+}

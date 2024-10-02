@@ -83,7 +83,7 @@ function pomodoro_timer(time) {
       const clock = setInterval(function () {
         
         timer_count.innerHTML = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;  
-        
+        document.title = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds} - My Pomofarm`;
 
         // If/Else Statement controlling the timer
         if (seconds > 0) {
